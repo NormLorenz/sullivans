@@ -5781,7 +5781,7 @@ Footer Area CSS
 =================================================*/
 .footer-area {
   padding-top: 80px;
-  background-color: #212529;
+  /* background-color: #212529; */
 }
 
 .single-footer-widget {

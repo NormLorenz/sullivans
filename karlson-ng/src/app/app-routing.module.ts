@@ -20,9 +20,9 @@ import { FaqComponent } from './components/pages/faq/faq.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
 
 const routes: Routes = [
-    {path: '', component: HomeComponent},
-    {path: 'marketing-agency', component: MarketingAgencyComponent},
-    {path: 'digital-marketing', component: DigitalMarketingComponent},
+    { path: '', component: HomeComponent},
+    { path: 'marketing-agency', component: MarketingAgencyComponent},
+    { path: 'digital-marketing', component: DigitalMarketingComponent},
     { path: 'business-solutions', component: BusinessSolutionsComponent},
     { path: 'about', component: AboutComponent},
     { path: 'services', component: ServicesComponent},
@@ -44,4 +44,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
