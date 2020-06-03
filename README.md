@@ -18,14 +18,13 @@
 
 ## Free images [here](www.pixabay.com)
 
-## To Do
+## tasks yet to be completed
 * fix favicon.ico
 * fix company-logo.png - cutting off the 'g'
 * use {{title}}
 
 ## publish to firebase
 https://alligator.io/angulardeploying-angular-app-to-firebase/
-
 https://medium.com/@longboardcreator/deploying-angular-6-applications-to-firebase-hosting-b5dacde9c772
 
 ```bash

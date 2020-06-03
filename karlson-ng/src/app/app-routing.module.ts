@@ -20,10 +20,10 @@ import { FaqComponent } from './components/pages/faq/faq.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
 
 const routes: Routes = [
-    { path: '', component: HomeComponent},
-    { path: 'marketing-agency', component: MarketingAgencyComponent},
-    { path: 'digital-marketing', component: DigitalMarketingComponent},
-    { path: 'business-solutions', component: BusinessSolutionsComponent},
+    // { path: '', component: HomeComponent},
+    // { path: '', component: MarketingAgencyComponent},
+    // { path: '', component: DigitalMarketingComponent},
+    { path: '', component: BusinessSolutionsComponent},
     { path: 'about', component: AboutComponent},
     { path: 'services', component: ServicesComponent},
     { path: 'service-details', component: ServiceDetailsComponent},
