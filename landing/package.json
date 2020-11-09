@@ -1,5 +1,5 @@
 {
-  "name": "hiric",
+  "name": "sullivans",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -23,6 +23,7 @@
     "@mdi/font": "^4.8.95",
     "@ng-bootstrap/ng-bootstrap": "^5.1.5",
     "@nicky-lenaers/ngx-scroll-to": "^3.0.1",
+    "ng2-avatar": "^2.3.1",
     "ngx-youtube-player": "^7.1.5",
     "rxjs": "~6.5.5",
     "tslib": "^1.10.0",

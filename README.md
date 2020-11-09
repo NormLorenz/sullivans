@@ -18,11 +18,6 @@
 
 ## Free images [here](www.pixabay.com)
 
-## tasks yet to be completed
-* fix favicon.ico
-* fix company-logo.png - cutting off the 'g'
-* use {{title}}
-
 ## publish to firebase
 https://alligator.io/angulardeploying-angular-app-to-firebase/
 https://medium.com/@longboardcreator/deploying-angular-6-applications-to-firebase-hosting-b5dacde9c772
@@ -38,3 +33,24 @@ firebase init
 firebase deploy
 ```
 
+## tasks yet to be completed
+* fix favicon.ico
+* automate email
+* automate phone
+* use initials instead of pictures for testamonies
+
+```html
+<img _ngcontent-vob-c24="" src="assets/images/logo-ver-2.svg" width="304px" height="132px" alt="logo">
+```
+* plumb in emails
+* finish off services
+* finish off about us page
+* clean up assets
+* clean up src tree
+* build new components
+* new project folders (contains images with legend - scrolling left and right)
+* adjust services icons
+* build a carousel page 
+* set spaces to 2
+* new favicon.ico
+* <!--END TESTIMONIAL-->

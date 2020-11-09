@@ -149,7 +149,7 @@ b {
 .bg-overlay {
     background: #005C97;  /* fallback for old browsers */
     background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    opacity: 0.95;
+    opacity: 0.80;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -207,7 +207,6 @@ iframe {
     max-width: 100%;
 }
 
-
 .hover-effect {
     transition: all .3s ease-in-out;
 }
@@ -220,7 +219,7 @@ iframe {
 .bg-gray {
     background-color: #f7f7f7;
 }
-
+    
 .bg-white {
     background-color: #fff;
 }
@@ -414,7 +413,7 @@ iframe {
   =====================================*/
 
 .bg-home {
-    background: url("../images/bg-home.jpg");
+    background: url("../images/excavator-1936799_1920.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1376,3 +1375,4 @@ ul.pattern .color8 {
         display: none;
     }
 }
+

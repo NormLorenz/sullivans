@@ -19,4 +19,5 @@ import { ScrollspyDirective } from './scrollspy.directive';
   // tslint:disable-next-line: max-line-length
   exports: [FeaturesComponent, PricingComponent, BlogComponent, ContactComponent, AboutComponent, ServicesComponent, FooterComponent, SwitcherComponent, ScrollspyDirective]
 })
+
 export class SharedModule { }
