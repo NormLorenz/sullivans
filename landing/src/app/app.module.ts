@@ -20,4 +20,5 @@ import { PagesModule } from './pages/pages.module';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

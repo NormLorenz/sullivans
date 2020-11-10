@@ -35,8 +35,6 @@ firebase deploy
 
 ## tasks yet to be completed
 * fix favicon.ico
-* automate email
-* automate phone
 * use initials instead of pictures for testamonies
 
 ```html
@@ -50,5 +48,11 @@ firebase deploy
 * build new components
 * adjust services icons
 * set spaces to 2
+* split out navigation and routing
 * new favicon.ico
+* ng serve --open
+```html
+<a href="tel:5099362681">509 936 2681</a>
+<a href="mailto:sulli99181@outlook.com">sulli99181@outlook.com</a>
+```
 * <!--END TESTIMONIAL-->
