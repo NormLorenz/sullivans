@@ -48,9 +48,7 @@ firebase deploy
 * clean up assets
 * clean up src tree
 * build new components
-* new project folders (contains images with legend - scrolling left and right)
 * adjust services icons
-* build a carousel page 
 * set spaces to 2
 * new favicon.ico
 * <!--END TESTIMONIAL-->
