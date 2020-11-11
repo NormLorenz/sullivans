@@ -55,4 +55,3 @@ firebase deploy
 <a href="tel:5099362681">509 936 2681</a>
 <a href="mailto:sulli99181@outlook.com">sulli99181@outlook.com</a>
 ```
-* <!--END TESTIMONIAL-->

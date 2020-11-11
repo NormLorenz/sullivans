@@ -9,9 +9,22 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PagesRoutingModule } from './pages-routing.module';
 import { ProjectsComponent } from './projects/projects.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { ServicesComponent } from './services/services.component';
+import { TestimoniesComponent } from './testimonies/testimonies.component';
 
 @NgModule({
-  declarations: [ProjectsComponent, HomeComponent],
+  // tslint:disable-next-line: max-line-length
+  declarations: [
+    ProjectsComponent, 
+    HomeComponent,
+    AboutComponent, 
+    ContactComponent, 
+    ServicesComponent,
+    TestimoniesComponent
+  ],
+  // tslint:disable-next-line: max-line-length
   imports: [
     CommonModule,
     PagesRoutingModule,
