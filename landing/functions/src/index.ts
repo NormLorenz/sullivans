@@ -1,11 +1,5 @@
 // Start writing Firebase Functions
 
-// https://firebase.google.com/docs/functions/typescript
-// https://github.com/firebase/functions-samples/issues/454
-// https://subscription.packtpub.com/book/application_development/9781786468710/12/ch12lvl1sec71/sending-mail
-// https://nodemailer.com/about/
-// https://firebase.google.com/docs/functions/config-env
-
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 import * as nodemailer from 'nodemailer';
@@ -13,9 +7,9 @@ import * as handlebars from 'handlebars';
 
 const APP_BUCKET = 'sullivan-f9153.appspot.com';
 const APP_NAME = 'Sullivan Excavating Inc';
-const APP_EMAIL = 'lindaoaksford@gmail.com';
-const SUBJECT_CUSTOMER = 'Thank You for Your Query';
-const SUBJECT_BUSINESS = 'ATTN: Web Site Query Received';
+const APP_EMAIL = 'sullivanexcavatinginc@gmail.com';
+const SUBJECT_CUSTOMER = 'Thank You for Your Message';
+const SUBJECT_BUSINESS = 'ATTN: Web Site Message Received';
 
 export interface IEmailEnvelope {
   name: string;
@@ -24,6 +18,8 @@ export interface IEmailEnvelope {
   subject: string;
   message: string;
 }
+
+admin.initializeApp();
 
 const mailTransport = nodemailer.createTransport({
   host: 'smtp.gmail.com',
@@ -40,19 +36,18 @@ export const HealthStatus = functions.https.onRequest((request, response) => {
 });
 
 export const SendCustomerEmail = functions.https.onRequest((request, response) => {
-  let emailEnvelope = createEmailEnvelope('Norm Lorenz', 'normlorenz@gmail.com', '5092301370', 'Hey', 'How much will it cost');
-  sendEmail('emails/customer.html', SUBJECT_CUSTOMER, emailEnvelope);
-  response.send('<p>some html</p>');
+  const emailEnvelope = createEmailEnvelope('Norm Lorenz', 'normlorenz@gmail.com', '5092301370', 'Hey', 'How much will it cost');
+  response.send(sendEmail('emails/customer.html', SUBJECT_CUSTOMER, emailEnvelope));
 });
 
 export const SendBusinessEmail = functions.https.onRequest((request, response) => {
-  let emailEnvelope = createEmailEnvelope('Norm Lorenz', 'normlorenz@gmail.com', '5092301370', 'Hey', 'How much will it cost');
-  sendEmail('emails/business.html', SUBJECT_BUSINESS, emailEnvelope);
-  response.send('<p>some html</p>');
+  const emailEnvelope = createEmailEnvelope('Norm Lorenz', 'normlorenz@gmail.com', '5092301370', 'Hey', 'How much will it cost');
+  response.send(sendEmail('emails/business.html', SUBJECT_BUSINESS, emailEnvelope));
 });
 
-// export const SendSullivanEmail = functions.auth.user().onDelete((user) => {
-//   return sendEmail('emails/signout.html', `Email Query from ${APP_NAME}!`, user);
+// export const SendWelcomeEmail = functions.auth.user().onCreate((user) => {
+//   const emailEnvelope = createEmailEnvelope('Norm Lorenz', 'normlorenz@gmail.com', '5092301370', 'Hey', 'How much will it cost');
+//   return sendEmail('emails/signup.html', `Welcome to ${APP_NAME}!`, emailEnvelope);
 // });
 
 async function sendEmail(templatePath: string, subject: string, emailEnvelope: IEmailEnvelope) {
@@ -66,13 +61,15 @@ async function sendEmail(templatePath: string, subject: string, emailEnvelope: I
     to: emailEnvelope.email,
   };
 
+  console.log('sendEmail', mailOptions);
   await mailTransport.sendMail(mailOptions);
   console.log('sendEmail', subject, emailEnvelope);
-
-  return true;
+  return 'true';
 }
 
 function createEmailEnvelope(name: string, email: string, phone: string, subject: string, message: string): IEmailEnvelope {
-  let newEmail = { name: name, email: email, phone: phone, subject: subject, message: message };
+  const newEmail = { name: name, email: email, phone: phone, subject: subject, message: message };
   return newEmail;
 }
+
+// https://github.com/firebase/functions-samples/issues/499
