@@ -39,17 +39,26 @@ firebase deploy
 ```html
 <img _ngcontent-vob-c24="" src="assets/images/logo-ver-2.svg" width="304px" height="132px" alt="logo">
 ```
-* plumb in emails
-* finish off services
+* finish off services page
 * finish off about us page
-* send email to sue
+* finish off testomonies page
 * clean up assets
 * write documentation
 * hook site into Google maps
 * clean up src tree
-* email required fields
+* remove shared folder
+* emails
+  * angular reactive forms
+  * build an email component
+  * build a contact component
+  * email notification when sent
+  * cc other sullivan address
+  * get api login for sullivanexcavatinginc@gmail.com email address
+  * plumb in emails
+  * validations for emails
+  * email required fields
+  * why are the emails returning this {"domain":{"domain":null,"_events":{},"_eventsCount":1,"members":[]}}
 * adjust services icons
-* why are the emails returning this {"domain":{"domain":null,"_events":{},"_eventsCount":1,"members":[]}}
 * set spaces to 2
 * about and projects need to be wider
 * new favicon.ico
