@@ -1,1 +1,36 @@
-<p>email-form works!</p>
+<div class="home-registration-form bg-gray">
+
+  <h4 class="form-heading text-center mt-2">What can we do for you</h4>
+  <form class="registration-form" [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+
+    <input type="text" class="form-control registration-input-box" placeholder="Your name*" formControlName="name">
+    <div *ngIf="name.invalid && (name.dirty || name.touched)">Name is required</div>
+
+    <input type="email" class="form-control registration-input-box" placeholder="Your email*" formControlName="email">
+    <div *ngIf="email.invalid && (email.dirty || email.touched)">Email is required</div>
+
+    <textarea class="form-control registration-textarea-box" rows="4" placeholder="Your message (optional)"
+      formControlName="message"></textarea>
+
+    <button type="submit" class="btn btn-custom home-btn-width" [disabled]="emailForm.invalid">Send</button>
+  </form>
+
+</div>
+
+<div style="float:right; width:50%; display:none;">
+
+  <h3>Form Status</h3>
+  <b>status : </b>{{emailForm.status}}<br />
+  <b>valid : </b>{{emailForm.valid}}<br />
+  <b>invalid : </b>{{emailForm.invalid}}<br />
+  <b>touched : </b>{{emailForm.touched}}<br />
+  <b>untouched : </b>{{emailForm.untouched}}<br />
+  <b>pristine : </b>{{emailForm.pristine}}<br />
+  <b>dirty : </b>{{emailForm.dirty}}<br />
+  <b>disabled : </b>{{emailForm.disabled}}<br />
+  <b>enabled : </b>{{emailForm.enabled}}<br />
+
+  <h3>Form Value</h3>
+  {{emailForm.value | json}}<br />
+
+</div>

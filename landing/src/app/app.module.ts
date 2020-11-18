@@ -5,15 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // import { AvatarModule } from 'ng2-avatar';
 
-import { PagesModule } from './pages/pages.module';
-import { EmailFormComponent } from './components/email-form/email-form.component';
-import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { PagesModule } from './pages/pages.module'
 
 @NgModule({
   declarations: [
-    AppComponent,
-    EmailFormComponent,
-    ContactFormComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

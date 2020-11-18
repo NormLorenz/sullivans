@@ -4,6 +4,7 @@ import { DOCUMENT } from '@angular/common';
 @Directive({
   selector: '[appScrollspy]'
 })
+
 export class ScrollspyDirective {
 
   @Input() public spiedTags = [];

@@ -50,20 +50,7 @@
           <a href="javascript: void(0);" [ngx-scroll-to]="'services'" class="btn btn-custom margin-t-30">Services</a>
         </div>
         <div class="col-lg-4 offset-lg-1 mt-5 mt-lg-0">
-          <div class="home-registration-form bg-gray">
-            <h4 class="form-heading text-center mt-2">What can we do for you</h4>
-
-            <form class="registration-form" id="registration-form">
-
-              <input type="text" id="exampleInputName1" class="form-control registration-input-box" placeholder="Name">
-              <input type="email" id="exampleInputEmail1" class="form-control registration-input-box" placeholder="Email">
-              <textarea class="form-control registration-textarea-box" rows="4" placeholder="Message"></textarea>
-
-              <button class="btn btn-custom home-btn-width">Send</button>
-
-            </form>
-
-          </div>
+          <app-email-form></app-email-form>
         </div>
       </div>
     </div>

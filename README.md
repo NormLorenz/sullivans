@@ -47,6 +47,7 @@ firebase deploy
 * hook site into Google maps
 * clean up src tree
 * remove shared folder
+* navigation 'about' stays highlighted
 * emails
   * angular reactive forms
   * build an email component

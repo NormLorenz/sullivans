@@ -1,1 +1,65 @@
-<p>contact-form works!</p>
+<div class="bg-gray home-registration-form">
+  <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-group mt-2">
+          <input type="text" class="form-control" placeholder="Your name*" formControlName="name">
+          <div *ngIf="name.invalid && (name.dirty || name.touched)">Name is required</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group mt-2">
+          <input type="email" class="form-control" placeholder="Your email*" formControlName="email">
+          <div *ngIf="email.invalid && (name.dirty || email.touched)">Email is required</div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group mt-2">
+          <input type="text" class="form-control" placeholder="Your phone (optional)" formControlName="phone">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-group mt-2">
+          <input type="text" class="form-control" placeholder="Your subject (optional)" formControlName="subject">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-group mt-2">
+          <textarea rows="4" class="form-control" placeholder="Your message (optional)"
+            formControlName="message"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 text-right">
+        <button type="submit" class="btn btn-custom home-btn-width" [disabled]="emailForm.invalid">Send</button>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+<div style="float:right; width:50%; display:none;">
+
+  <h3>Form Status</h3>
+  <b>status : </b>{{emailForm.status}}<br />
+  <b>valid : </b>{{emailForm.valid}}<br />
+  <b>invalid : </b>{{emailForm.invalid}}<br />
+  <b>touched : </b>{{emailForm.touched}}<br />
+  <b>untouched : </b>{{emailForm.untouched}}<br />
+  <b>pristine : </b>{{emailForm.pristine}}<br />
+  <b>dirty : </b>{{emailForm.dirty}}<br />
+  <b>disabled : </b>{{emailForm.disabled}}<br />
+  <b>enabled : </b>{{emailForm.enabled}}<br />
+
+  <h3>Form Value</h3>
+  {{emailForm.value | json}}<br />
+
+</div>

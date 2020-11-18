@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { SharedModule } from '../shared/shared.module';
 
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
@@ -13,16 +15,20 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { TestimoniesComponent } from './testimonies/testimonies.component';
+import { EmailFormComponent } from '../components/email-form/email-form.component';
+import { ContactFormComponent } from '../components/contact-form/contact-form.component';
 
 @NgModule({
   // tslint:disable-next-line: max-line-length
   declarations: [
-    ProjectsComponent, 
+    ProjectsComponent,
     HomeComponent,
-    AboutComponent, 
-    ContactComponent, 
+    AboutComponent,
+    ContactComponent,
     ServicesComponent,
-    TestimoniesComponent
+    TestimoniesComponent,
+    EmailFormComponent,
+    ContactFormComponent
   ],
   // tslint:disable-next-line: max-line-length
   imports: [
@@ -32,6 +38,8 @@ import { TestimoniesComponent } from './testimonies/testimonies.component';
     NgbModule,
     NgxYoutubePlayerModule.forRoot(),
     ScrollToModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 
