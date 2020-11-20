@@ -14,12 +14,14 @@ export class ContactFormComponent implements OnInit {
   ngOnInit(): void { }
 
   emailForm = this.formBuilder.group({
-    name: ['', [Validators.required, Validators.minLength(2)]],
+    name: ['', [Validators.required, Validators.minLength(3)]],
     email: ['', [Validators.required, Validators.email]],
     phone: [''],
     subject: [''],
     message: ['']
   });
+
+  sendingFlag = false;
 
   get name() { return this.emailForm.get('name'); }
   get email() { return this.emailForm.get('email'); }
@@ -28,8 +30,12 @@ export class ContactFormComponent implements OnInit {
   get message() { return this.emailForm.get('message'); }
 
   onSubmit() {
-    // TODO: Use EventEmitter with form value
+    this.sendingFlag = true;
     console.warn(this.emailForm.value);
     console.warn(this.emailForm.invalid);
+    setTimeout(() => {
+      this.emailForm.reset();
+      this.sendingFlag = false;
+    }, 5000);
   }
 }

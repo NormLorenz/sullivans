@@ -3,19 +3,6 @@
 * Click on Mouse and Touchpad
 * Click off/on button to the right of touchpad settings
 
-## publish to surge.sh
-* build the site ```$ ng build --prod```
-* rename dist/sullivans-excavating/index.html to 200.html page
-* install surge if not already installed ```$ sudo npm install -g surge```
-* run surge ```$ surge```
-  * email: ```normlorenz@gmail.com```
-  * token: ```042538```
-  * project path: ```/home/norm/Projects/sullivans-excavating/dist/sullivans-excavating```
-  * size: ```91 files, 7.2 MB```
-  * domain: ```sullivans-excavating.surge.sh```
-
-[look here](https://medium.com/@nioperas06/deploy-angular-apps-to-surge-7ee763db2235)
-
 ## Free images [here](www.pixabay.com)
 
 ## publish to firebase
@@ -41,28 +28,26 @@ firebase deploy
 ```
 * finish off services page
 * finish off about us page
+* rename the function health service to status
 * finish off testomonies page
 * clean up assets
 * write documentation
 * hook site into Google maps
-* clean up src tree
+* clean up source tree
 * remove shared folder
 * navigation 'about' stays highlighted
 * emails
   * angular reactive forms
   * build an email component
   * build a contact component
+  * NOTE: BUILD CLICKABLE LINKS FOR BOTH PHONE AND EMAIL IN EMAIL TEMPLATES
   * email notification when sent
-  * cc other sullivan address
   * get api login for sullivanexcavatinginc@gmail.com email address
   * plumb in emails
-  * validations for emails
-  * email required fields
+  * email required fields display text
   * why are the emails returning this {"domain":{"domain":null,"_events":{},"_eventsCount":1,"members":[]}}
-* adjust services icons
 * set spaces to 2
-* about and projects need to be wider
-* new favicon.ico
+
 ```html
 <a href="tel:5099362681">509 936 2681</a>
 <a href="mailto:sulli99181@outlook.com">sulli99181@outlook.com</a>

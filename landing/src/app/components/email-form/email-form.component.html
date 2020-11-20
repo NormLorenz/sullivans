@@ -1,24 +1,33 @@
 <div class="home-registration-form bg-gray">
-
   <h4 class="form-heading text-center mt-2">What can we do for you</h4>
-  <form class="registration-form" [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
 
-    <input type="text" class="form-control registration-input-box" placeholder="Your name*" formControlName="name">
-    <div *ngIf="name.invalid && (name.dirty || name.touched)">Name is required</div>
+    <div class="validation-container">
+      <input type="text" class="form-control registration-input-box" placeholder="Your name*" formControlName="name">
+      <span class="validation-warning" *ngIf="name.errors && (name.dirty || name.touched)">
+        <span *ngIf="name.errors.required"> Name required </span>
+        <span *ngIf="name.errors.minlength"> Must be greater than 2 characters </span>
+      </span>
+    </div>
 
-    <input type="email" class="form-control registration-input-box" placeholder="Your email*" formControlName="email">
-    <div *ngIf="email.invalid && (email.dirty || email.touched)">Email is required</div>
+    <div class="validation-container">
+      <input type="email" class="form-control registration-input-box" placeholder="Your email*" formControlName="email">
+      <span class="validation-warning" *ngIf="email.errors && (email.dirty || email.touched)">
+        <span *ngIf="email.errors.required"> Email required </span>
+        <span *ngIf="email.errors.email"> Must be valid email format </span>
+      </span>
+    </div>
 
     <textarea class="form-control registration-textarea-box" rows="4" placeholder="Your message (optional)"
       formControlName="message"></textarea>
 
-    <button type="submit" class="btn btn-custom home-btn-width" [disabled]="emailForm.invalid">Send</button>
-  </form>
+    <button type="submit" class="btn btn-custom home-btn-width" [disabled]="emailForm.invalid" *ngIf="!sendingFlag">Send</button>
+    <button class="btn btn-custom home-btn-width" *ngIf="sendingFlag"><span class="spinner-border spinner-border-sm"></span> Sending..</button>
 
+  </form>
 </div>
 
 <div style="float:right; width:50%; display:none;">
-
   <h3>Form Status</h3>
   <b>status : </b>{{emailForm.status}}<br />
   <b>valid : </b>{{emailForm.valid}}<br />
@@ -31,6 +40,5 @@
   <b>enabled : </b>{{emailForm.enabled}}<br />
 
   <h3>Form Value</h3>
-  {{emailForm.value | json}}<br />
-
+  {{ emailForm.value | json }}<br />
 </div>
