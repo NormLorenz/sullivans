@@ -1,6 +1,6 @@
 ## turn off touchpad
 * Search for mouse
-* Click on Mouse and Touchpad
+* Click on mouse and touchpad
 * Click off/on button to the right of touchpad settings
 
 ## Free images [here](www.pixabay.com)
@@ -22,29 +22,24 @@ firebase deploy
 
 ## tasks yet to be completed
 * fix favicon.ico
+* use single quotes instead of double quotes in home markup file
 * use initials instead of pictures for testimonies
-```html
-<img _ngcontent-vob-c24="" src="assets/images/logo-ver-2.svg" width="304px" height="132px" alt="logo">
-```
-* finish off services page
-* finish off about us page
-* rename the function health service to status
+* review services page - linda
+* review about us page - linda
+* review contact us page - linda
 * finish off testomonies page
+  * replace pictures with letters
 * clean up assets
 * write documentation
 * hook site into Google maps
 * clean up source tree
 * remove shared folder
-* navigation 'about' stays highlighted
+* need photos for the projects page
 * emails
-  * angular reactive forms
-  * build an email component
-  * build a contact component
   * NOTE: BUILD CLICKABLE LINKS FOR BOTH PHONE AND EMAIL IN EMAIL TEMPLATES
   * email notification when sent
   * get api login for sullivanexcavatinginc@gmail.com email address
   * plumb in emails
-  * email required fields display text
   * why are the emails returning this {"domain":{"domain":null,"_events":{},"_eventsCount":1,"members":[]}}
 * set spaces to 2
 

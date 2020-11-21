@@ -1,58 +1,58 @@
-<div class="home-registration-form bg-gray">
-  <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+<div class='home-registration-form bg-gray'>
+  <form [formGroup]='emailForm' (ngSubmit)='onSubmit()'>
 
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="form-group mt-2">
-          <div class="validation-container">
-            <input type="text" class="form-control" placeholder="Your name*" formControlName="name">
-            <span class="validation-warning" *ngIf="name.errors && (name.dirty || name.touched)">
-              <span *ngIf="name.errors.required"> Name required </span>
-              <span *ngIf="name.errors.minlength"> Must be greater than 2 characters </span>
+    <div class='row'>
+      <div class='col-lg-12'>
+        <div class='form-group mt-2'>
+          <div class='validation-container'>
+            <input type='text' class='form-control' placeholder='Your name*' formControlName='name'>
+            <span class='validation-warning' *ngIf='name.errors && (name.dirty || name.touched)'>
+              <span *ngIf='name.errors.required'> Name required </span>
+              <span *ngIf='name.errors.minlength'> Must be greater than 2 characters </span>
             </span>
           </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="form-group mt-2">
-          <div class="validation-container">
-            <input type="email" class="form-control" placeholder="Your email*" formControlName="email">
-            <span class="validation-warning" *ngIf="email.errors && (email.dirty || email.touched)">
-              <span *ngIf="email.errors.required"> Email required </span>
-              <span *ngIf="email.errors.email"> Must be valid email format </span>
+    <div class='row'>
+      <div class='col-lg-6'>
+        <div class='form-group mt-2'>
+          <div class='validation-container'>
+            <input type='email' class='form-control' placeholder='Your email*' formControlName='email'>
+            <span class='validation-warning' *ngIf='email.errors && (email.dirty || email.touched)'>
+              <span *ngIf='email.errors.required'> Email required </span>
+              <span *ngIf='email.errors.email'> Must be valid email format </span>
             </span>
           </div>
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="form-group mt-2">
-          <input type="text" class="form-control" placeholder="Your phone (optional)" formControlName="phone">
+      <div class='col-lg-6'>
+        <div class='form-group mt-2'>
+          <input type='text' class='form-control' placeholder='Your phone (optional)' formControlName='phone'>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="form-group mt-2">
-          <input type="text" class="form-control" placeholder="Your subject (optional)" formControlName="subject">
+    <div class='row'>
+      <div class='col-lg-12'>
+        <div class='form-group mt-2'>
+          <input type='text' class='form-control' placeholder='Your subject (optional)' formControlName='subject'>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="form-group mt-2">
-          <textarea rows="4" class="form-control" placeholder="Your message (optional)"
-            formControlName="message"></textarea>
+    <div class='row'>
+      <div class='col-lg-12'>
+        <div class='form-group mt-2'>
+          <textarea rows='4' class='form-control' placeholder='Your message (optional)'
+            formControlName='message'></textarea>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-12 text-right">
-        <button type="submit" class="btn btn-custom home-btn-width" [disabled]="emailForm.invalid" *ngIf="!sendingFlag">Send</button>
+    <div class='row'>
+      <div class='col-lg-12 text-right'>
+        <button type='submit' class='btn btn-custom home-btn-width' [disabled]='emailForm.invalid' *ngIf='!sendingFlag'>Send</button>
 
-        <!-- <button type="submit" class="btn btn-custom home-btn-width" [disabled]="emailForm.invalid">Send</button> -->
-        <button class="btn btn-custom home-btn-width" *ngIf="sendingFlag"><span class="spinner-border spinner-border-sm"></span> Sending..</button>
+        <!-- <button type='submit' class='btn btn-custom home-btn-width' [disabled]='emailForm.invalid'>Send</button> -->
+        <button class='btn btn-custom home-btn-width' *ngIf='sendingFlag'><span class='spinner-border spinner-border-sm'></span> Sending..</button>
     
       </div>
     </div>
@@ -60,7 +60,7 @@
   </form>
 </div>
 
-<div style="float:right; width:50%; display:none;">
+<div style='float:right; width:50%; display:none;'>
   <h3>Form Status</h3>
   <b>status : </b>{{emailForm.status}}<br />
   <b>valid : </b>{{emailForm.valid}}<br />

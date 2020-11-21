@@ -34,7 +34,7 @@ const mailTransport = nodemailer.createTransport({
   }
 });
 
-export const Health = functions.https.onRequest((request, response) => {
+export const Status = functions.https.onRequest((request, response) => {
   response.send('The email function is alive and well!\n\n');
 });
 
