@@ -31,7 +31,6 @@ firebase deploy
   * replace pictures with letters
 * clean up assets
 * write documentation
-* hook site into Google maps
 * clean up source tree
 * remove shared folder
 * need photos for the projects page
@@ -43,11 +42,6 @@ firebase deploy
   * why are the emails returning this {"domain":{"domain":null,"_events":{},"_eventsCount":1,"members":[]}}
 * set spaces to 2
 
-```html
-<a href="tel:5099362681">509 936 2681</a>
-<a href="mailto:sulli99181@outlook.com">sulli99181@outlook.com</a>
-```
-* 
 ```bash
 # functions
 https://www.google.com/search?q=html+email+tempate&rlz=1C1CHBF_enUS872US872&oq=html+email+tempate&aqs=chrome..69i57j0i10i457j0i10l6.15417j0j7&sourceid=chrome&ie=UTF-8
@@ -55,7 +49,6 @@ https://firebase.google.com/docs/storage/admin/start
 #####
 ## https://firebase.google.com/docs/functions/config-env
 
-firebase functions:config:set someservice.key="THE API KEY" someservice.id="THE CLIENT ID"
 firebase functions:config:set gmail.user="normlorenz@gmail.com" gmail.pass=""
 firebase deploy --only functions
 firebase functions:config:get gmail
