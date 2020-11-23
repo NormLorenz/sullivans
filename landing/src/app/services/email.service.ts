@@ -29,4 +29,5 @@ export class EmailService {
   sendCustomerEmail(email: IEmail): Observable<IEmailResponse> {
     return this.http.post<IEmailResponse>(`${environment.baseUrl}/${environment.sendCustomerEmailFunction}`, email);
   }
+
 }

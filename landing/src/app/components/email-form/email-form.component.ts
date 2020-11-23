@@ -41,8 +41,8 @@ export class EmailFormComponent implements OnInit {
       this.sendingFlag = false;
     }, 5000);
 
-    this.subscription = this.emailService.checkStatus().
-      subscribe(data => {
+    this.subscription = this.emailService.sendCustomerEmail(this.emailForm.value)
+      .subscribe(data => {
         console.log(data, "success");
       }, error => {
         console.error(error, "error");
