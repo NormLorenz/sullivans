@@ -1,10 +1,15 @@
 // Start writing Firebase Functions
 // https://github.com/firebase/functions-samples/issues/499
+// https://haha.world/firebase-cors/
 
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 import * as nodemailer from 'nodemailer';
 import * as handlebars from 'handlebars';
+
+const cors = require("cors")({
+  origin: true
+});
 
 const APP_BUCKET = 'sullivan-f9153.appspot.com';
 
@@ -39,7 +44,9 @@ const mailTransport = nodemailer.createTransport({
 });
 
 export const Status = functions.https.onRequest((request, response) => {
-  response.send('The email function is alive and well!\n\n');
+  return cors(request, response, () => {
+    response.send({ available: true, status: 'The email function is alive and well!' });
+  });
 });
 
 export const SendCustomerTestEmail = functions.https.onRequest((request, response) => {

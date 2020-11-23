@@ -40,12 +40,15 @@ firebase deploy
   * get api login for sullivanexcavatinginc@gmail.com email address
   * plumb in emails
   * why are the emails returning this {"domain":{"domain":null,"_events":{},"_eventsCount":1,"members":[]}}
+  * send/sending/sent
 * set spaces to 2
 
 ```bash
 # functions
 https://www.google.com/search?q=html+email+tempate&rlz=1C1CHBF_enUS872US872&oq=html+email+tempate&aqs=chrome..69i57j0i10i457j0i10l6.15417j0j7&sourceid=chrome&ie=UTF-8
 https://firebase.google.com/docs/storage/admin/start
+
+
 #####
 ## https://firebase.google.com/docs/functions/config-env
 
@@ -60,6 +63,7 @@ firebase functions:config:get gmail
 // https://subscription.packtpub.com/book/application_development/9781786468710/12/ch12lvl1sec71/sending-mail
 // https://nodemailer.com/about/
 // https://firebase.google.com/docs/functions/config-env
+// https://stackoverflow.com/questions/59799252/cors-blocked-access-control-allow-origin-firebase-functions-not-allowed
 
 
 ```javascript

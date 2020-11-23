@@ -1,4 +1,6 @@
 // https://github.com/LilyaMelkonyan/NodeMailer-with-Angular-7
+// https://stackoverflow.com/questions/59799252/cors-blocked-access-control-allow-origin-firebase-functions-not-allowed
+// https://haha.world/firebase-cors/
 // don't forget to send the right headers test/json
 
 import { Injectable } from '@angular/core';
