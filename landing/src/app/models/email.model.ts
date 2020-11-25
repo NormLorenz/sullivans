@@ -7,5 +7,6 @@ export interface IEmail {
 }
 
 export interface IEmailResponse {
-  result: string;
+  success: boolean;
+  error: string;
 }

@@ -23,20 +23,16 @@ firebase deploy
 ## tasks yet to be completed
 * fix favicon.ico
 * use single quotes instead of double quotes in home markup file
-* use initials instead of pictures for testimonies
 * finish off testomonies page
-  * replace pictures with letters
+  * replace pictures with initials
 * clean up assets
 * write documentation
 * clean up source tree
+* share this web site on google
 * remove shared folder
 * need photos for the projects page
 * emails
-  * NOTE: BUILD CLICKABLE LINKS FOR BOTH PHONE AND EMAIL IN EMAIL TEMPLATES
-  * email notification when sent logic
   * get api login for sullivanexcavatinginc@gmail.com email address
-  * plumb in emails
-  * send/sending/sent
 * set spaces to 2
 
 ```bash

@@ -16,7 +16,7 @@ const APP_EMAIL = 'Sullivan Excavating Inc <sullivanexcavatinginc@gmail.com>';
 const APP_CC = 'Sullivan Excavating Inc <sulli99181@outlook.com>';
 const TEST_EMAIL = 'Linda Oaksford <linda_oaksford@hotmail.com>';
 const TEST_CC = 'Linda Oaksford <lindaoaksford@gmail.com>';
-const SUBJECT_CUSTOMER = 'Thank You for Your Message';
+const SUBJECT_CUSTOMER = 'Thank You for Your Interest';
 const SUBJECT_BUSINESS = 'ATTN: Web Site Message Received';
 
 export interface IEmailEnvelope {
@@ -60,8 +60,8 @@ export const SendCustomerTestEmail = functions.https.onRequest((request, respons
     };
 
     mailTransport.sendMail(mailOptions, (err, info) => {
-      if (err) { return response.send({ error: err.toString() }); }
-      return response.send({ success: true });
+      if (err) { return response.send({ success: false, error: err.toString() }); }
+      return response.send({ success: true, error: '' });
     });
   });
 });
@@ -80,8 +80,8 @@ export const SendBusinessTestEmail = functions.https.onRequest((request, respons
     };
 
     mailTransport.sendMail(mailOptions, (err, info) => {
-      if (err) { return response.send({ error: err.toString() }); }
-      return response.send({ success: true });
+      if (err) { return response.send({ success: false, error: err.toString() }); }
+      return response.send({ success: true, error: '' });
     });
   });
 });
@@ -100,8 +100,8 @@ export const SendCustomerEmail = functions.https.onRequest((request, response) =
     };
 
     mailTransport.sendMail(mailOptions, (err, info) => {
-      if (err) { return response.send({ error: err.toString() }); }
-      return response.send({ success: true });
+      if (err) { return response.send({ success: false, error: err.toString() }); }
+      return response.send({ success: true, error: '' });
     });
   });
 });
@@ -120,8 +120,8 @@ export const SendBusinessEmail = functions.https.onRequest((request, response) =
     };
 
     mailTransport.sendMail(mailOptions, (err, info) => {
-      if (err) { return response.send({ error: err.toString() }); }
-      return response.send({ success: true });
+      if (err) { return response.send({ success: false, error: err.toString() }); }
+      return response.send({ success: true, error: '' });
     });
   });
 });

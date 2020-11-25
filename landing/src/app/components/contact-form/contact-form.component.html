@@ -49,11 +49,22 @@
     </div>
     <div class='row'>
       <div class='col-lg-12 text-right'>
-        <button type='submit' class='btn btn-custom home-btn-width' [disabled]='emailForm.invalid' *ngIf='!sendingFlag'>Send</button>
 
-        <!-- <button type='submit' class='btn btn-custom home-btn-width' [disabled]='emailForm.invalid'>Send</button> -->
-        <button class='btn btn-custom home-btn-width' *ngIf='sendingFlag'><span class='spinner-border spinner-border-sm'></span> Sending..</button>
-    
+        <button type='submit' class='btn btn-custom home-btn-width' [disabled]='emailForm.invalid'>
+          <span *ngIf='isSendState'> Send </span>
+          <span *ngIf='isErrorState'> Error </span>
+          <span *ngIf='isSentState'> Sent </span>
+          <span *ngIf='isSendingState' class='spinner-border spinner-border-sm'></span>
+          <span *ngIf='isSendingState'> Sending ... </span>
+        </button>
+
+        <div class='validation-container'>
+          <span class='validation-warning'>
+            <span *ngIf='isSentState'> Thank you! </span>
+            <span *ngIf='isErrorState'> Email not sent. Please try again! </span>
+          </span>
+        </div>
+
       </div>
     </div>
 

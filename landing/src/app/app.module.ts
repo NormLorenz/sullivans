@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 // import { AvatarModule } from 'ng2-avatar';
 import { HttpClientModule } from '@angular/common/http';
 
-import { PagesModule } from './pages/pages.module'
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
