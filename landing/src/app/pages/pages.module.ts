@@ -3,12 +3,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { SharedModule } from '../shared/shared.module';
-
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
-import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { PagesRoutingModule } from './pages-routing.module';
+import { AvatarModule } from 'ngx-avatar';
+
 import { ProjectsComponent } from './projects/projects.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -36,10 +35,10 @@ import { ContactFormComponent } from '../components/contact-form/contact-form.co
     PagesRoutingModule,
     SharedModule,
     NgbModule,
-    NgxYoutubePlayerModule.forRoot(),
     ScrollToModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AvatarModule
   ]
 })
 

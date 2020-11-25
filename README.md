@@ -25,6 +25,7 @@ firebase deploy
 * use single quotes instead of double quotes in home markup file
 * finish off testomonies page
   * replace pictures with initials
+  * https://www.npmjs.com/package/ngx-avatar
 * clean up assets
 * write documentation
 * clean up source tree

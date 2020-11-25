@@ -701,17 +701,6 @@ iframe {
 	max-width: 500px;
 }
 
-/*=====================================
-     8. WEBSITE DESCRIPTION
-======================================*/
-
-.bg-web-desc{
-    background: url("../images/img-1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
 /*======================================
     9.  PRICING BOX
 ========================================*/
@@ -904,17 +893,6 @@ iframe {
 .testimonial-decs p {
     line-height: 24px;
     font-style: italic;
-}
-
-/*=====================================
-     13. GET STARTED
-======================================*/
-
-.bg-get-start{
-    background: url("../images/img-2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 /*=======================================
