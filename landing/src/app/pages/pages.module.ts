@@ -7,6 +7,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PagesRoutingModule } from './pages-routing.module';
 import { AvatarModule } from 'ngx-avatar';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 import { ProjectsComponent } from './projects/projects.component';
 import { HomeComponent } from './home/home.component';
@@ -38,7 +39,8 @@ import { ContactFormComponent } from '../components/contact-form/contact-form.co
     ScrollToModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
-    AvatarModule
+    AvatarModule,
+    IvyCarouselModule
   ]
 })
 
