@@ -1,0 +1,11 @@
+.validation-container {
+  position: relative;
+}
+
+.validation-warning {
+  position: absolute;
+  color:green;
+  font-size: 12px;
+  bottom: -18px;
+  left: 18px;
+}

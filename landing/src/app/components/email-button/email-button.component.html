@@ -1,0 +1,14 @@
+<button type='submit' class='btn btn-custom home-btn-width' [disabled]='emailForm.invalid'>
+  <span *ngIf='isSendState'> Send </span>
+  <span *ngIf='isErrorState'> Error </span>
+  <span *ngIf='isSentState'> Sent </span>
+  <span *ngIf='isSendingState' class='spinner-border spinner-border-sm'></span>
+  <span *ngIf='isSendingState'> Sending ... </span>
+</button>
+
+<div class='validation-container'>
+  <span class='validation-warning'>
+    <span *ngIf='isSentState'> Thank you for your submission! </span>
+    <span *ngIf='isErrorState'> Email not sent. Please try again! </span>
+  </span>
+</div>

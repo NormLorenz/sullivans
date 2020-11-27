@@ -17,6 +17,8 @@ import { ServicesComponent } from './services/services.component';
 import { TestimoniesComponent } from './testimonies/testimonies.component';
 import { EmailFormComponent } from '../components/email-form/email-form.component';
 import { ContactFormComponent } from '../components/contact-form/contact-form.component';
+import { EmailButtonComponent } from '../components/email-button/email-button.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   // tslint:disable-next-line: max-line-length
@@ -28,7 +30,9 @@ import { ContactFormComponent } from '../components/contact-form/contact-form.co
     ServicesComponent,
     TestimoniesComponent,
     EmailFormComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    EmailButtonComponent,
+    FooterComponent
   ],
   // tslint:disable-next-line: max-line-length
   imports: [

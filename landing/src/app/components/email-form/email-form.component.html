@@ -1,6 +1,6 @@
 <div class='home-registration-form bg-gray'>
   <h4 class='form-heading text-center mt-2'>What can we do for you</h4>
-  <form [formGroup]='emailForm' (ngSubmit)='onSubmit()'>
+  <form [formGroup]='emailForm' (ngSubmit)='emailButton.onSubmit()'>
 
     <div class='validation-container'>
       <input type='text' class='form-control registration-input-box' placeholder='Your name*' formControlName='name'>
@@ -21,36 +21,7 @@
     <textarea class='form-control registration-textarea-box' rows='4' placeholder='Your message (optional)'
       formControlName='message'></textarea>
 
-    <button type='submit' class='btn btn-custom home-btn-width' [disabled]='emailForm.invalid'>
-      <span *ngIf='isSendState'> Send </span>
-      <span *ngIf='isErrorState'> Error </span>
-      <span *ngIf='isSentState'> Sent </span>
-      <span *ngIf='isSendingState' class='spinner-border spinner-border-sm'></span>
-      <span *ngIf='isSendingState'> Sending ... </span>
-    </button>
-
-    <div class='validation-container'>
-      <span class='validation-warning'>
-        <span *ngIf='isSentState'> Thank you! </span>
-        <span *ngIf='isErrorState'> Email not sent. Please try again! </span>
-      </span>
-    </div>
+    <app-email-button [emailForm]='emailForm' #emailButton></app-email-button>
 
   </form>
-</div>
-
-<div style='float:right; width:50%; display:none;'>
-  <h3>Form Status</h3>
-  <b>status : </b>{{emailForm.status}}<br />
-  <b>valid : </b>{{emailForm.valid}}<br />
-  <b>invalid : </b>{{emailForm.invalid}}<br />
-  <b>touched : </b>{{emailForm.touched}}<br />
-  <b>untouched : </b>{{emailForm.untouched}}<br />
-  <b>pristine : </b>{{emailForm.pristine}}<br />
-  <b>dirty : </b>{{emailForm.dirty}}<br />
-  <b>disabled : </b>{{emailForm.disabled}}<br />
-  <b>enabled : </b>{{emailForm.enabled}}<br />
-
-  <h3>Form Value</h3>
-  {{ emailForm.value | json }}<br />
 </div>

@@ -26,15 +26,18 @@ firebase deploy
 * finish off testomonies page
   * replace pictures with initials
   * https://www.npmjs.com/package/ngx-avatar
-* clean up assets
 * write documentation
 * clean up source tree
 * share this web site on google
 * remove shared folder
 * need photos for the projects page
+  * https://github.com/ivylaboratory/angular-carousel
 * emails
   * get api login for sullivanexcavatinginc@gmail.com email address
 * set spaces to 2
+* firebase
+  * image 232 x 64, 116 x 32
+  * https://firebase.google.com/brand-guidelines/
 
 ```bash
 # functions
