@@ -22,6 +22,10 @@ export class EmailService {
     return this.http.get<string>(`${environment.baseUrl}/${environment.statusFunction}`);
   }
 
+  sendSpamEmail(email: IEmail): Observable<IEmailResponse> {
+    return this.http.post<IEmailResponse>(`${environment.baseUrl}/${environment.sendSpamEmailFunction}`, email);
+  }
+
   sendBusinessEmail(email: IEmail): Observable<IEmailResponse> {
     return this.http.post<IEmailResponse>(`${environment.baseUrl}/${environment.sendBusinessEmailFunction}`, email);
   }

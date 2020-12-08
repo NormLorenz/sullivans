@@ -3,5 +3,6 @@ export const environment = {
   baseUrl: 'https://us-central1-sullivan-f9153.cloudfunctions.net',
   statusFunction: 'Status',
   sendBusinessEmailFunction: 'SendBusinessEmail',
-  sendCustomerEmailFunction: 'SendCustomerEmail'
+  sendCustomerEmailFunction: 'SendCustomerEmail',
+  sendSpamEmailFunction: 'SendSpamEmail'
 };

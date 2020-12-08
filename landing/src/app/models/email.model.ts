@@ -4,6 +4,7 @@ export interface IEmail {
   phone: string;
   subject: string;
   message: string;
+  address: string;
 }
 
 export interface IEmailResponse {

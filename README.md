@@ -3,8 +3,6 @@
 * Click on mouse and touchpad
 * Click off/on button to the right of touchpad settings
 
-## Free images [here](www.pixabay.com)
-
 ## publish to firebase
 https://alligator.io/angulardeploying-angular-app-to-firebase/
 https://medium.com/@longboardcreator/deploying-angular-6-applications-to-firebase-hosting-b5dacde9c772
@@ -48,4 +46,30 @@ https://firebase.google.com/docs/storage/admin/start
 firebase functions:config:set gmail.user="normlorenz@gmail.com" gmail.pass=""
 firebase deploy --only functions
 firebase functions:config:get gmail
+```
+
+## testimonies
+* Ralph Warren - Chewelah
+* Nancy Martin - Loon Lake
+* Donna Busch - Loon Lake
+* Kevin Broselle - Vancover, WA
+* Kathy Pinnell - Valley
+* Robyn Deaton - Seattle
+* Pat Lowery - Deer Lake
+* J Johnson - Deer Park
+* B*** - Loon Lake
+* Chase Breckner - Addy
+
+## more photos
+* https://elements.envato.com/
+* https://www.pixabay.com
+
+## span
+* https://stackoverflow.com/questions/36227376/better-honeypot-implementation-form-anti-spam
+* https://stackoverflow.com/questions/26452716/how-to-create-a-nuclear-honeypot-to-catch-form-spammers
+* https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion
+
+
+```javascript
+<input type="text" name="a_password" style="display:none !important" tabindex="-1" autocomplete="off">
 ```

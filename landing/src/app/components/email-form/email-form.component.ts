@@ -17,12 +17,14 @@ export class EmailFormComponent implements OnInit {
     name: ['', [Validators.required, Validators.minLength(3)]],
     email: ['', [Validators.required, Validators.email]],
     phone: [''],
+    address: [''],
     subject: [''],
     message: ['']
   });
 
   get name() { return this.emailForm.get('name'); }
   get email() { return this.emailForm.get('email'); }
+  get address() { return this.emailForm.get('address'); }
   get message() { return this.emailForm.get('message'); }
 
 }

@@ -69,22 +69,43 @@ export class EmailButtonComponent implements OnInit {
   public onSubmit() {
     if (this.emailForm.valid) {
       this.runStateMachine(Action.submit);
-      console.log(this.emailForm.value);
 
-      // setTimeout(() => {
-      //   this.emailForm.reset();
-      //   this.runStateMachine(Action.success);
-      //   this.runStateMachine(Action.error);
-      // }, 5000);
+      // if (this.emailForm.value.address === '') {
+      //   console.log(this.emailForm.value);
+      //   console.log(this.emailForm.value.address);
+      //   setTimeout(() => {
+      //     this.emailForm.reset();
+      //     this.runStateMachine(Action.success);
+      //   }, 5000);
+      // }
 
-      this.emailService.sendEmails(this.emailForm.value).subscribe((responses: IEmailResponse[]) => {
-        this.emailForm.reset();
-        let result = Action.success;
-        responses.forEach((response: IEmailResponse) => {
-          if (response.success !== true) { result = Action.error; }
+      // else {
+      //   console.log(this.emailForm.value);
+      //   console.log(this.emailForm.value.address);
+      //   setTimeout(() => {
+      //     this.emailForm.reset();
+      //     this.runStateMachine(Action.error);
+      //   }, 5000);
+      // }
+
+      if (this.emailForm.value.address === '') {
+        this.emailService.sendEmails(this.emailForm.value).subscribe((responses: IEmailResponse[]) => {
+          this.emailForm.reset();
+          let result = Action.success;
+          responses.forEach((response: IEmailResponse) => {
+            if (response.success !== true) { result = Action.error; }
+          });
+          this.runStateMachine(result);
         });
-        this.runStateMachine(result);
-      });
+      }
+
+      else {
+        this.emailService.sendSpamEmail(this.emailForm.value).subscribe((response: IEmailResponse) => {
+          this.emailForm.reset();
+          let result = response.success === true ? Action.success : Action.error;
+          this.runStateMachine(result);
+        });
+      }
     }
   }
 

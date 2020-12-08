@@ -13,18 +13,14 @@ interface IImage {
 export class ProjectsComponent implements OnInit {
 
   images: IImage[] = [
-    { path: 'assets/images/projects/0127200900b_HDR.jpg' },
     { path: 'assets/images/projects/0127200904_HDR.jpg' },
     { path: 'assets/images/projects/0220201126a_HDR.jpg' },
     { path: 'assets/images/projects/0220201127_HDR.jpg' },
-    { path: 'assets/images/projects/0302201410_HDR.jpg' },
     { path: 'assets/images/projects/0305200729_HDR.jpg' },
     { path: 'assets/images/projects/0310201620a.jpg' },
-    { path: 'assets/images/projects/0416201203.jpg' },
     { path: 'assets/images/projects/0428200854.jpg' },
     { path: 'assets/images/projects/0428201406.jpg' },
     { path: 'assets/images/projects/0430201146c.jpg' },
-    { path: 'assets/images/projects/0507201212_HDR.jpg' },
     { path: 'assets/images/projects/0510201938.jpg' },
     { path: 'assets/images/projects/0513200831_HDR.jpg' },
     { path: 'assets/images/projects/1126191330_HDR.jpg' },

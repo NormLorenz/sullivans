@@ -6,8 +6,9 @@ export const environment = {
   production: false,
   baseUrl: 'https://us-central1-sullivan-f9153.cloudfunctions.net',
   statusFunction: 'Status',
-  sendBusinessEmailFunction: 'SendBusinessTestEmail',
-  sendCustomerEmailFunction: 'SendCustomerTestEmail'
+  sendBusinessEmailFunction: 'SendBusinessEmail',
+  sendCustomerEmailFunction: 'SendCustomerEmail',
+  sendSpamEmailFunction: 'SendSpamEmail'
 };
 
 /*
