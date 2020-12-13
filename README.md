@@ -20,6 +20,7 @@ firebase deploy
 
 ## tasks yet to be completed
 * fix favicon.ico
+* tighted space between pages
 * use single quotes instead of double quotes in home markup file
 * finish off testomonies page
   * replace pictures with initials
@@ -64,11 +65,12 @@ firebase functions:config:get gmail
 * https://elements.envato.com/
 * https://www.pixabay.com
 
-## span
+## spam
 * https://stackoverflow.com/questions/36227376/better-honeypot-implementation-form-anti-spam
 * https://stackoverflow.com/questions/26452716/how-to-create-a-nuclear-honeypot-to-catch-form-spammers
 * https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion
 
+* https://malcoded.com/posts/angular-ngstyle/
 
 ```javascript
 <input type="text" name="a_password" style="display:none !important" tabindex="-1" autocomplete="off">

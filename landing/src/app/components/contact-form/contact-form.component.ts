@@ -11,7 +11,10 @@ export class ContactFormComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    const element = document.getElementById('addressRowId');
+    element.style.display = 'none';
+   }
 
   emailForm = this.formBuilder.group({
     name: ['', [Validators.required, Validators.minLength(3)]],

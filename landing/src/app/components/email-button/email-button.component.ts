@@ -33,12 +33,18 @@ export class EmailButtonComponent implements OnInit {
 
   constructor(private emailService: EmailService) { }
 
+  secondsFromInit: number = 0;
+
   ngOnInit(): void {
     this.emailForm.statusChanges.subscribe(() => {
       if (this.emailForm.dirty === true) {
         this.runStateMachine(Action.dirty);
       }
     });
+
+    setInterval(() => {
+      this.secondsFromInit += 1;
+    }, 1000);
   }
 
   private runStateMachine(action: Action) {
@@ -67,10 +73,23 @@ export class EmailButtonComponent implements OnInit {
   get isSentState() { return this.state === State.sent; }
 
   public onSubmit() {
+
     if (this.emailForm.valid) {
       this.runStateMachine(Action.submit);
 
-      // if (this.emailForm.value.address === '') {
+      // if (this.secondsFromInit > 3) {
+      //   console.log('ok a human presssed the button');
+      //   this.emailForm.reset();
+      //   this.runStateMachine(Action.success);
+      // }
+      
+      // else {
+      //   console.log('ok a robot presssed the button');
+      //   this.emailForm.reset();
+      //   this.runStateMachine(Action.error);
+      // }
+
+      // if (this.emailForm.value.address === '' && this.secondsFromInit > 3) {
       //   console.log(this.emailForm.value);
       //   console.log(this.emailForm.value.address);
       //   setTimeout(() => {
@@ -88,7 +107,7 @@ export class EmailButtonComponent implements OnInit {
       //   }, 5000);
       // }
 
-      if (this.emailForm.value.address === '') {
+      if (this.emailForm.value.address === '' && this.secondsFromInit > 3) {
         this.emailService.sendEmails(this.emailForm.value).subscribe((responses: IEmailResponse[]) => {
           this.emailForm.reset();
           let result = Action.success;
