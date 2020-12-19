@@ -11,10 +11,7 @@ export class EmailFormComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit(): void { 
-    const element = document.getElementById('addressId');
-    element.style.display = 'none';
-  }
+  ngOnInit(): void { }
 
   emailForm = this.formBuilder.group({
     name: ['', [Validators.required, Validators.minLength(3)]],
