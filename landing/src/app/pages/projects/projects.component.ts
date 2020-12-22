@@ -28,6 +28,8 @@ export class ProjectsComponent implements OnInit {
     { path: 'assets/images/projects/1203191216_HDR.jpg' },
     { path: 'assets/images/projects/1210191332a_HDR.jpg' },
     { path: 'assets/images/projects/6553263048.jpg' },
+    { path: 'assets/images/projects/MVIMG_20200603_133202.jpg' },
+    { path: 'assets/images/projects/MVIMG_20200603_133225.jpg' },
   ];
 
   name = 'Angular ' + VERSION.major;
@@ -35,6 +37,8 @@ export class ProjectsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    console.log(this.name);
+  }
 
 }

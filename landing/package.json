@@ -1,10 +1,10 @@
 {
   "name": "sullivans",
-  "version": "0.0.0",
+  "version": "1.1.104",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "angular-build-info && ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

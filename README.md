@@ -22,12 +22,11 @@ firebase deploy
 * fix favicon.ico
 * tighted space between pages
 * use single quotes instead of double quotes in home markup file
-* finish off testomonies page
+* finish off testimonies page
   * replace pictures with initials
   * https://www.npmjs.com/package/ngx-avatar
 * write documentation
 * clean up source tree
-* share this web site on google
 * remove shared folder
 * need photos for the projects page
   * https://github.com/ivylaboratory/angular-carousel
@@ -49,17 +48,6 @@ firebase deploy --only functions
 firebase functions:config:get gmail
 ```
 
-## testimonies
-* Ralph Warren - Chewelah
-* Nancy Martin - Loon Lake
-* Donna Busch - Loon Lake
-* Kevin Broselle - Vancover, WA
-* Kathy Pinnell - Valley
-* Robyn Deaton - Seattle
-* Pat Lowery - Deer Lake
-* J Johnson - Deer Park
-* B*** - Loon Lake
-* Chase Breckner - Addy
 
 ## more photos
 * https://elements.envato.com/
