@@ -63,3 +63,5 @@ firebase functions:config:get gmail
 ```javascript
 <input type="text" name="a_password" style="display:none !important" tabindex="-1" autocomplete="off">
 ```
+## build information
+https://github.com/inexio/angular-build-info
